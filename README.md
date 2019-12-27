@@ -1,6 +1,6 @@
-# sightly city
+# Sightly City
 
-A new Flutter project.
+Приложение для ЖК Видный Город
 
 ## Getting Started
 
