@@ -26,9 +26,14 @@ dependencies:
   flutter_svg: ^0.15.0
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.7.4"
   flutter_test:
     sdk: flutter
-
+    
+flutter_icons:
+  android: "launcher_icon" 
+  ios: true
+  image_path: "assets/icon.png"  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -61,6 +66,12 @@ flutter:
   - family: PoiretOne
     fonts:
       - asset: fonts/PoiretOne-Regular.ttf
+  - family: HelveticaNeueCyrThin
+    fonts:
+      - asset: fonts/HelveticaNeueCyr-Thin.ttf
+  - family: HelveticaNeueCyrUltraLight
+    fonts:
+      - asset: fonts/HelveticaNeueCyr-UltraLight.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
@@ -74,3 +85,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  
