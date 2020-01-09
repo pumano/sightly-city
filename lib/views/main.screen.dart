@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sightlycity/nav_drawer.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -8,64 +9,24 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(title: Text('Основное')),
-      body: new Center(
-        child: new Text("SECOND VIEW"),
-      ),
-      drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Видный Город', style: TextStyle(color: Colors.white, fontFamily: 'PoiretOne', fontSize: 40.0)),
-              decoration: BoxDecoration(
-                color: Color(0xFF941C40),
-              ),
-            ),
-            ListTile(
-              title: Text('Новости'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Информация УК'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Инфраструктура'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Соц сети'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      )
-    );
+    return Scaffold(
+        appBar: AppBar(title: Text('Видный Город', style: Theme.of(context).textTheme.subhead)),
+        body: SafeArea(
+            child: Container(
+                padding: EdgeInsets.all(20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                        padding: EdgeInsets.only(bottom: 20),
+                        child: Text("Светский пригород",
+                            style: Theme.of(context).textTheme.title)),
+                    Text(
+                        "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
+                        style: Theme.of(context).textTheme.body1
+                        )
+                  ],
+                ))),
+        drawer: NavigationDrawer());
   }
 }

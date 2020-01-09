@@ -42,12 +42,12 @@ class _SplashScreenState extends State<SplashScreen> {
                         child: SvgPicture.asset('assets/logo_vid.svg',
                             semanticsLabel: 'Vidniy Gorod'),
                       ),
-                      Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: Text("Видный Город",
+                      Container(
+                          padding: const EdgeInsets.only(top: 30),
+                          child: Text("Видный \n Город",
                               style: TextStyle(
                                 fontFamily: 'PoiretOne',
-                                fontSize: 40.0,
+                                fontSize: 50.0,
                               ))),
                     ],
                   ),
