@@ -6,29 +6,63 @@ class ServiceInfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Информация УК", style: Theme.of(context).textTheme.subhead)),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: Text("На автомобиле",
-                      style: Theme.of(context).textTheme.title)),
-              Text(
-                  "6 км от Москвы по Варшавскому шоссе, до первого перекрестка после МКАД, далее налево по указателю на Расторгуевское шоссе. По рассторгуевскому шоссе до указателя ЖК «Видный Город».",
-                  style: Theme.of(context).textTheme.body1),
+        appBar: AppBar(
+            title: Text("Информация УК",
+                style: Theme.of(context).textTheme.subhead)),
+        body: ListView(
+            children: ListTile.divideTiles(
+          context: context,
+          tiles: [
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Техник Ольга'),
+                subtitle: Text('+7 (966) 356-94-95'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Сантехник Роман'),
+                subtitle: Text('+7 (901) 381-49-91'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Электрик Сергей'),
+                subtitle: Text('+7 (937) 731-66-90'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Слесарь-сантехник Андрей'),
+                subtitle: Text('+7 (977) 459-76-58'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            //////////////////////
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Аварийная служба'),
+                subtitle: Text('+7 (495) 541-60-10'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Абонентский отдел'),
+                subtitle: Text('+7 (495) 541-01-46'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Приемная'),
+                subtitle: Text('+7 (495) 541-00-21'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('ПТС'),
+                subtitle: Text('+7 (495) 548-04-25'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+            ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Юридический отдел'),
+                subtitle: Text('+7 (495) 541-57-56'),
+                trailing: Icon(Icons.keyboard_arrow_right)),
+          ],
+        ).toList())
 
-                  ListView(children: <Widget>[
-                    ListTile(
-                      title: Text('Техник Ольга'),
-                      
-                    )
-                  ],)
-
-                  /*
+        /*
 Техник Ольга +7-966-356-94-95 
 Сантехник Роман +7-901-381-49-91 
 Электрик Сергей +7-937-731-66-90 
@@ -59,10 +93,7 @@ pravo@gkhvidnoe.ru
 IT отдел (проблемы с доступом на сайт)
 4955488977@mail.ru
 */
-            ]
-          )
-        )
-      ),
-    );
+
+        );
   }
 }
