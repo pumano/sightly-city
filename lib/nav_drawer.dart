@@ -14,6 +14,7 @@ class NavigationDrawer extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
+          /*
           ListTile(
             title: Text('Видный Город',
                 style: TextStyle(
@@ -23,14 +24,15 @@ class NavigationDrawer extends StatelessWidget {
             subtitle: Text("Светский пригород",
                 style: Theme.of(context).textTheme.body1),
           ),
-          /*
+          */
+          
             DrawerHeader(
-              child: Text('Видный Город', style: TextStyle(color: Colors.white, fontFamily: 'PoiretOne', fontSize: 40.0)),
+              child: Center( child: Column( children: [ Text('Видный Город', style: TextStyle(color: Colors.white, fontFamily: 'PoiretOne', fontSize: 40.0)), Container( padding: EdgeInsets.only(top: 20), child: Text("Светский пригород", style: TextStyle(color: Colors.white, fontFamily: "HelveticaNeueCyrThin", fontSize: 20),))])),
               decoration: BoxDecoration(
                 color: Color(0xFF941C40),
               ),
             ),
-            */
+            
           ListTile(
             title: Text('О Видном Городе', style: Theme.of(context).textTheme.subhead),
             onTap: () {
@@ -66,6 +68,15 @@ class NavigationDrawer extends StatelessWidget {
               // ...
               // Then close the drawer
               Navigator.pushNamed(context, "/transport");
+            },
+          ),  
+          ListTile(
+            title: Text('Кодекс', style: Theme.of(context).textTheme.subhead),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.pushNamed(context, "/rules");
             },
           ),
           ListTile(
