@@ -40,6 +40,7 @@ class NavigationDrawer extends StatelessWidget {
               // ...
               // Then close the drawer
               Navigator.pop(context);
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           ListTile(
@@ -58,7 +59,7 @@ class NavigationDrawer extends StatelessWidget {
               // ...
               // Then close the drawer
               Navigator.of(context).pop();
-              Navigator.of(context).pushNamed('/serviceinfo');
+              Navigator.of(context).pushReplacementNamed('/serviceinfo');
             },
           ),
           ListTile(
@@ -67,7 +68,8 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pushNamed(context, "/transport");
+              Navigator.of(context).pop();
+              Navigator.pushReplacementNamed(context, "/transport");
             },
           ),  
           ListTile(
@@ -76,7 +78,8 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pushNamed(context, "/rules");
+              Navigator.of(context).pop();
+              Navigator.pushReplacementNamed(context, "/rules");
             },
           ),
           ListTile(

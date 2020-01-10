@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sightlycity/nav_drawer.dart';
 
 class TransportScreen extends StatelessWidget {
   const TransportScreen({Key key}) : super(key: key);
@@ -9,6 +10,7 @@ class TransportScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Как добраться", style: Theme.of(context).textTheme.subhead),
         ),
+        drawer: NavigationDrawer(),
         body: SingleChildScrollView(
             child: Container(
           padding: EdgeInsets.all(20.0),

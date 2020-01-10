@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sightlycity/nav_drawer.dart';
 
 class RulesScreen extends StatelessWidget {
   const RulesScreen({Key key}) : super(key: key);
@@ -9,6 +10,7 @@ class RulesScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Кодекс", style: Theme.of(context).textTheme.subhead),
         ),
+        drawer: NavigationDrawer(),
         body: SingleChildScrollView(
             child: Container(
           padding: EdgeInsets.all(20.0),
