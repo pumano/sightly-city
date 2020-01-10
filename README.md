@@ -2,6 +2,8 @@
 
 Приложение для ЖК Видный Город
 
+![ЖК Видный Город](/assets/screens/splash.jpg?raw=true "ЖК Видный Город")
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
