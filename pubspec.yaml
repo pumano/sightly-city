@@ -27,6 +27,7 @@ dependencies:
   flutter_map: ^0.8.2
   latlong: ^0.6.1
   url_launcher: ^5.4.1
+  carousel_slider: ^1.4.1
 
 dev_dependencies:
   flutter_launcher_icons: "^0.7.4"
@@ -53,6 +54,11 @@ flutter:
   assets:
   - assets/logo_vid.svg
   - assets/map-pin.png
+  - assets/vg1.jpg
+  - assets/vg2.jpg
+  - assets/vg3.jpg
+  - assets/vg4.jpg
+  - assets/vg5.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

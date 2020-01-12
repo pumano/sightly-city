@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:sightlycity/nav_drawer.dart';
 
@@ -7,6 +8,14 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final List<String> imgList = [
+    'vg1.jpg',
+    'vg2.jpg',
+    'vg3.jpg',
+    'vg4.jpg',
+    'vg5.jpg'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +28,25 @@ class _MainScreenState extends State<MainScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    CarouselSlider(
+                      height: 200.0,
+                      items: imgList.map((i) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                decoration:
+                                    BoxDecoration(color: Colors.black87),
+                                child: Image(
+                                  image: AssetImage('assets/${i}'),
+                                ));
+                          },
+                        );
+                      }).toList(),
+                    ),
                     Container(
-                        padding: EdgeInsets.only(bottom: 20),
+                        padding: EdgeInsets.only(top: 10, bottom: 20),
                         child: Text("Светский пригород",
                             style: Theme.of(context).textTheme.title)),
                     Text(
