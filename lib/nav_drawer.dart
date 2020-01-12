@@ -25,16 +25,32 @@ class NavigationDrawer extends StatelessWidget {
                 style: Theme.of(context).textTheme.body1),
           ),
           */
-          
-            DrawerHeader(
-              child: Center( child: Column( children: [ Text('Видный Город', style: TextStyle(color: Colors.white, fontFamily: 'PoiretOne', fontSize: 40.0)), Container( padding: EdgeInsets.only(top: 20), child: Text("Светский пригород", style: TextStyle(color: Colors.white, fontFamily: "HelveticaNeueCyrThin", fontSize: 20),))])),
-              decoration: BoxDecoration(
-                color: Color(0xFF941C40),
-              ),
+
+          DrawerHeader(
+            child: Center(
+                child: Column(children: [
+              Text('Видный Город',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'PoiretOne',
+                      fontSize: 40.0)),
+              Container(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Text(
+                    "Светский пригород",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "HelveticaNeueCyrThin",
+                        fontSize: 20),
+                  ))
+            ])),
+            decoration: BoxDecoration(
+              color: Color(0xFF941C40),
             ),
-            
+          ),
           ListTile(
-            title: Text('О Видном Городе', style: Theme.of(context).textTheme.subhead),
+            title: Text('О Видном Городе',
+                style: Theme.of(context).textTheme.subhead),
             onTap: () {
               // Update the state of the app
               // ...
@@ -53,7 +69,8 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Информация УК', style: Theme.of(context).textTheme.subhead),
+            title: Text('Информация и телефоны',
+                style: Theme.of(context).textTheme.subhead),
             onTap: () {
               // Update the state of the app
               // ...
@@ -63,7 +80,8 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Расположение', style: Theme.of(context).textTheme.subhead),
+            title: Text('Расположение',
+                style: Theme.of(context).textTheme.subhead),
             onTap: () {
               // Update the state of the app
               // ...
@@ -71,7 +89,7 @@ class NavigationDrawer extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.pushReplacementNamed(context, "/transport");
             },
-          ),  
+          ),
           ListTile(
             title: Text('Кодекс', style: Theme.of(context).textTheme.subhead),
             onTap: () {
@@ -83,7 +101,8 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Инфраструктура', style: Theme.of(context).textTheme.subhead),
+            title: Text('Инфраструктура',
+                style: Theme.of(context).textTheme.subhead),
             onTap: () {
               // Update the state of the app
               // ...

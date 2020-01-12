@@ -29,8 +29,7 @@ class TransportScreen extends StatelessWidget {
                                 color: Color(0xFFAC956B)))),
                     */
               Container(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: MapWidget()),
+                  padding: EdgeInsets.only(bottom: 20), child: MapWidget()),
               Container(
                   padding: EdgeInsets.only(bottom: 20),
                   child: Text("На автомобиле",

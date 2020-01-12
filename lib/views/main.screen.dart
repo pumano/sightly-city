@@ -10,7 +10,9 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Видный Город', style: Theme.of(context).textTheme.subhead)),
+        appBar: AppBar(
+            title: Text('Видный Город',
+                style: Theme.of(context).textTheme.subhead)),
         body: SafeArea(
             child: Container(
                 padding: EdgeInsets.all(20.0),
@@ -23,8 +25,7 @@ class _MainScreenState extends State<MainScreen> {
                             style: Theme.of(context).textTheme.title)),
                     Text(
                         "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
-                        style: Theme.of(context).textTheme.body1
-                        )
+                        style: Theme.of(context).textTheme.body1)
                   ],
                 ))),
         drawer: NavigationDrawer());
