@@ -38,29 +38,39 @@ class MyApp extends StatelessWidget {
 
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, color: Color(0xFFAC956B), fontFamily: "PoiretOne"),
-          subtitle: TextStyle(fontSize: 26.0, fontFamily: "HelveticaNeueCyrThin"),
+          title: TextStyle(
+              fontSize: 36.0,
+              color: Color(0xFFAC956B),
+              fontFamily: "PoiretOne"),
+          subtitle:
+              TextStyle(fontSize: 26.0, fontFamily: "HelveticaNeueCyrThin"),
           body1: TextStyle(
-                            fontFamily: "HelveticaNeueCyrThin",
-                            fontSize: 18.0, color: Color(0xFF5D5D5D)),
+              fontFamily: "HelveticaNeueCyrThin",
+              fontSize: 18.0,
+              color: Color(0xFF5D5D5D)),
           body2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
           subhead: TextStyle(fontFamily: "HelveticaNeueCyrThin", fontSize: 20),
         ),
       ),
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        textTheme: TextTheme(
-          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, color: Color(0xFFAC956B), fontFamily: "PoiretOne"),
-          subtitle: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, fontFamily: "HelveticaNeueCyrThin"),
-          body1: TextStyle(
-                            letterSpacing: 1.15,
-                            fontFamily: "HelveticaNeueCyrThin",
-                            fontSize: 18.0),
-          body2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-          subhead: TextStyle(fontFamily: "PoiretOne", fontSize: 20),
-        )
-      ),
+          brightness: Brightness.dark,
+          textTheme: TextTheme(
+            headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+            title: TextStyle(
+                fontSize: 36.0,
+                color: Color(0xFFAC956B),
+                fontFamily: "PoiretOne"),
+            subtitle: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+                fontFamily: "HelveticaNeueCyrThin"),
+            body1: TextStyle(
+                letterSpacing: 1.15,
+                fontFamily: "HelveticaNeueCyrThin",
+                fontSize: 18.0),
+            body2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+            subhead: TextStyle(fontFamily: "PoiretOne", fontSize: 20),
+          )),
       routes: Routes().routes,
       initialRoute: '/splash',
     );

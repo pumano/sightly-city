@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sightlycity/nav_drawer.dart';
+import 'package:sightlycity/widgets/map.widget.dart';
 
 class TransportScreen extends StatelessWidget {
   const TransportScreen({Key key}) : super(key: key);
@@ -8,7 +9,8 @@ class TransportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Как добраться", style: Theme.of(context).textTheme.subhead),
+          title:
+              Text("Как добраться", style: Theme.of(context).textTheme.subhead),
         ),
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
@@ -26,6 +28,9 @@ class TransportScreen extends StatelessWidget {
                                 fontSize: 40.0,
                                 color: Color(0xFFAC956B)))),
                     */
+              Container(
+                  padding: EdgeInsets.only(bottom: 20),
+                  child: MapWidget()),
               Container(
                   padding: EdgeInsets.only(bottom: 20),
                   child: Text("На автомобиле",
@@ -68,7 +73,7 @@ class TransportScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.subtitle)),
               Text(
                   "На электричке до ж/д станции «Расторгуево», далее на автобусе № 379 до остановки «Видный Город». Либо на маршрутном такси № 1019",
-                  style: Theme.of(context).textTheme.body1)
+                  style: Theme.of(context).textTheme.body1),
             ],
           ),
         )));
