@@ -42,8 +42,10 @@ class MyApp extends StatelessWidget {
               fontSize: 36.0,
               color: Color(0xFFAC956B),
               fontFamily: "PoiretOne"),
-          subtitle:
-              TextStyle(fontSize: 26.0, fontFamily: "HelveticaNeueCyrThin"),
+          subtitle: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              fontFamily: "HelveticaNeueCyrThin"),
           body1: TextStyle(
               fontFamily: "HelveticaNeueCyrThin",
               fontSize: 18.0,
