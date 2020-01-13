@@ -68,11 +68,11 @@ List<Contact> getGarbageCollectionContacts() {
 List<Contact> getRussianPostContacts() {
   return [
     Contact(
-        name: 'Почта России 142702',
-        description:
-            '142702, г. Видное, Ленинский р-он, Петровский проезд, д. 24',
+        name: 'Почта России',
+        description: '142702',
         phone: '+7 (800) 100-00-00',
-        website: "https://pochta.ru/",
+        website: 'https://pochta.ru/',
+        address: '142702, г. Видное, Ленинский р-он, Петровский проезд, д. 24',
         coords: [55.5367, 37.6631])
   ];
 }

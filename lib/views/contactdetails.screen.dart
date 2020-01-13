@@ -35,12 +35,12 @@ class ContactDetailsScreen extends StatelessWidget {
                             UrlLauncher().launchURL("tel:" + contact.phone);
                           },
                         )
-                      : Text(""),
+                      : Container(),
                   contact.email != null
                       ? ListTile(
                           leading: Icon(
                             Icons.email,
-                            color: Colors.yellowAccent,
+                            color: Colors.yellow[300],
                           ),
                           title: Text(
                             contact.email,
@@ -52,7 +52,7 @@ class ContactDetailsScreen extends StatelessWidget {
                             UrlLauncher().launchURL("mailto:" + contact.email);
                           },
                         )
-                      : Text(""),
+                      : Container(),
                   contact.website != null
                       ? ListTile(
                           leading: Icon(Icons.insert_link),
@@ -66,10 +66,21 @@ class ContactDetailsScreen extends StatelessWidget {
                             UrlLauncher().launchURL(contact.website);
                           },
                         )
-                      : Text(""),
+                      : Container(),
+                  contact.address != null
+                      ? ListTile(
+                          leading: Icon(Icons.my_location),
+                          title: Text(
+                            contact.address,
+                          ),
+                          onTap: () async {
+                            // UrlLauncher().launchURL(contact.address);
+                          },
+                        )
+                      : Container(),
                   contact.coords != null
                       ? MapWidget(coords: contact.coords)
-                      : Text("")
+                      : Container()
                 ])));
   }
 }
