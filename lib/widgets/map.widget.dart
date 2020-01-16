@@ -4,8 +4,10 @@ import 'package:latlong/latlong.dart';
 
 class MapWidget extends StatelessWidget {
   final List coords;
-  const MapWidget({Key key, this.coords}) : super(key: key);
-
+  final List<String> providers = ["http://tile2.maps.2gis.com/tiles?x={x}&y={y}&z={z}", "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"];
+  
+  MapWidget({Key key, this.coords}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,11 +18,10 @@ class MapWidget extends StatelessWidget {
               center: coords != null
                   ? LatLng(coords[0], coords[1])
                   : LatLng(55.5375, 37.6433),
-              zoom: 13),
+              zoom: 13, maxZoom: 17),
           layers: [
             TileLayerOptions(
-                urlTemplate:
-                    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                urlTemplate: providers[0],
                 subdomains: ['a', 'b', 'c']),
             new MarkerLayerOptions(
               markers: [
