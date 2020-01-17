@@ -76,3 +76,19 @@ List<Contact> getRussianPostContacts() {
         coords: [55.5367, 37.6631])
   ];
 }
+
+List<Contact> getWebServicesContacts() {
+  return [
+    Contact(
+      name: 'Единая Диспетчерская Служба МО',
+      description:
+          'Сервис для жителей Подмосковья, который позводяет решать проблемы в многоквартирных домах без похода в управляющую компанию и заполнения бумажных документов.',
+      website: 'https://eds.mosreg.ru/',
+    ),
+    Contact(
+      name: 'Добродел',
+      description: 'Сообщи правительству Московской Области о проблемах.',
+      website: 'https://dobrodel.mosreg.ru/',
+    )
+  ];
+}

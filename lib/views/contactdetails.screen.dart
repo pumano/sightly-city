@@ -28,12 +28,18 @@ class ContactDetailsScreen extends StatelessWidget {
                             color: Colors.greenAccent,
                           ),
                           title: Text(contact.phone),
-                          subtitle: contact.description != null
-                              ? Text(contact.description)
-                              : null,
                           onTap: () async {
                             UrlLauncher().launchURL("tel:" + contact.phone);
                           },
+                        )
+                      : Container(),
+                  contact.description != null
+                      ? ListTile(
+                          leading: Icon(
+                            Icons.help,
+                          ),
+                          title: Text(contact.description),
+                          onTap: () async {},
                         )
                       : Container(),
                   contact.email != null

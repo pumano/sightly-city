@@ -17,6 +17,7 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
   List elevatorContacts;
   List garbageCollectionContacts;
   List russianPostContacts;
+  List webServicesContacts;
 
   @override
   void initState() {
@@ -26,6 +27,7 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
     elevatorContacts = getElevatorContacts();
     garbageCollectionContacts = getGarbageCollectionContacts();
     russianPostContacts = getRussianPostContacts();
+    webServicesContacts = getWebServicesContacts();
     super.initState();
   }
 
@@ -46,6 +48,10 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
                           padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
                           child: Text("Аварийная служба")),
                       ContactsList(contacts: emergenceContacts),
+                      Container(
+                          padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
+                          child: Text("Службы одного окна")),
+                      ContactsList(contacts: webServicesContacts),
                       Container(
                           padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
                           child: Text("Лифтовая диспетчерская")),

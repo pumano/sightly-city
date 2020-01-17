@@ -31,7 +31,13 @@ class ContactsList extends StatelessWidget {
                       padding: EdgeInsets.only(right: 12.0),
                       decoration: BoxDecoration(
                           border: Border(right: BorderSide(width: 1.0))),
-                      child: Icon(Icons.phone),
+                      child: contacts[index].phone != null
+                          ? Icon(Icons.phone)
+                          : contacts[index].website != null
+                              ? Icon(Icons.insert_link)
+                              : contacts[index].email != null
+                                  ? Icon(Icons.email)
+                                  : null,
                     ),
                     title: Text(
                       contacts[index].name,
