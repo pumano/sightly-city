@@ -19,7 +19,10 @@ class ContactsList extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
               child: Container(
                   decoration: BoxDecoration(
-                      color: Color.fromRGBO(64, 75, 96, .9),
+                      color: MediaQuery.of(context).platformBrightness ==
+                              Brightness.dark
+                          ? Color.fromRGBO(64, 75, 96, .9)
+                          : Colors.white70,
                       borderRadius: BorderRadius.circular(4.0)),
                   child: ListTile(
                     contentPadding:
@@ -27,27 +30,23 @@ class ContactsList extends StatelessWidget {
                     leading: Container(
                       padding: EdgeInsets.only(right: 12.0),
                       decoration: BoxDecoration(
-                          border: Border(
-                              right: BorderSide(
-                                  width: 1.0, color: Colors.white24))),
+                          border: Border(right: BorderSide(width: 1.0))),
                       child: Icon(Icons.phone),
                     ),
                     title: Text(
                       contacts[index].name,
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Row(
                       children: <Widget>[
                         Text(
-                            contacts[index].phone != null
-                                ? contacts[index].phone
-                                : '',
-                            style: TextStyle(color: Colors.white))
+                          contacts[index].phone != null
+                              ? contacts[index].phone
+                              : '',
+                        )
                       ],
                     ),
-                    trailing: Icon(Icons.keyboard_arrow_right,
-                        color: Colors.white, size: 30.0),
+                    trailing: Icon(Icons.keyboard_arrow_right, size: 30.0),
                     onTap: () {
                       Navigator.push(
                           context,
