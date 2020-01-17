@@ -107,7 +107,8 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pop(context);
+              Navigator.of(context).pop();
+              Navigator.pushReplacementNamed(context, "/infrastructure");
             },
           ),
           ListTile(
