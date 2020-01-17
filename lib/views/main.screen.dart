@@ -23,6 +23,8 @@ class _MainScreenState extends State<MainScreen> {
     'vg12.jpg',
     'vg13.jpg',
     'vg14.jpg',
+    'vg15.jpg',
+    'vg16.jpg',
   ];
 
   @override
@@ -51,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
                               ? Colors.transparent
                               : Colors.transparent),
                       child: Image(
-                        image: AssetImage('assets/photos/${i}'),
+                        image: AssetImage('assets/photos/$i'),
                       ));
                 },
               );
@@ -64,7 +66,7 @@ class _MainScreenState extends State<MainScreen> {
                 children: <Widget>[
                   Container(
                       padding: EdgeInsets.only(top: 10, bottom: 20),
-                      child: Text("Светский пригород",
+                      child: Text("СВЕТСКИЙ ПРИГОРОД",
                           style: Theme.of(context).textTheme.title)),
                   Text(
                       "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
