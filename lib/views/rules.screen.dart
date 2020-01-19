@@ -13,12 +13,12 @@ class RulesScreen extends StatelessWidget {
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
             child: Container(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Container(
-                          padding: EdgeInsets.only(bottom: 20),
+                          padding: const EdgeInsets.only(bottom: 20),
                           child: Text("Тишина",
                               style: Theme.of(context).textTheme.title)),
                       Text("Соблюдение закона о тишине",

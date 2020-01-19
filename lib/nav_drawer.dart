@@ -35,7 +35,7 @@ class NavigationDrawer extends StatelessWidget {
                       fontFamily: 'PoiretOne',
                       fontSize: 40.0)),
               Container(
-                  padding: EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Text(
                     "Светский пригород",
                     style: TextStyle(
@@ -55,8 +55,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pop(context);
-              Navigator.of(context).pushReplacementNamed('/');
+              Navigator.popAndPushNamed(context, '/');
             },
           ),
           ListTile(
@@ -75,8 +74,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.of(context).pop();
-              Navigator.of(context).pushReplacementNamed('/serviceinfo');
+              Navigator.popAndPushNamed(context, '/serviceinfo');
             },
           ),
           ListTile(
@@ -86,8 +84,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.of(context).pop();
-              Navigator.pushReplacementNamed(context, "/transport");
+              Navigator.popAndPushNamed(context, "/transport");
             },
           ),
           ListTile(
@@ -96,8 +93,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.of(context).pop();
-              Navigator.pushReplacementNamed(context, "/rules");
+              Navigator.popAndPushNamed(context, "/rules");
             },
           ),
           ListTile(
@@ -107,8 +103,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.of(context).pop();
-              Navigator.pushReplacementNamed(context, "/infrastructure");
+              Navigator.popAndPushNamed(context, "/infrastructure");
             },
           ),
           ListTile(

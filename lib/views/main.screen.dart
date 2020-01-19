@@ -1,5 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
 import 'package:sightlycity/nav_drawer.dart';
 
 class MainScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
     'vg6.jpg',
     'vg7.jpg',
     'vg8.jpg',
-    'vg9.jpg',
+    // 'vg9.jpg',
     'vg10.jpg',
     'vg11.jpg',
     'vg12.jpg',
@@ -25,6 +26,13 @@ class _MainScreenState extends State<MainScreen> {
     'vg14.jpg',
     'vg15.jpg',
     'vg16.jpg',
+    'vg17.jpg',
+    // 'vg18.jpg',
+    'vg19.jpg',
+    'vg20.jpg',
+    'vg21.jpg',
+    'vg22.jpg',
+    'vg23.jpg',
   ];
 
   @override
@@ -34,46 +42,40 @@ class _MainScreenState extends State<MainScreen> {
             title: Text('Видный Город',
                 style: Theme.of(context).textTheme.subhead)),
         body: Container(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: <
-                    Widget>[
-          CarouselSlider(
-            height: 200.0,
-            enlargeCenterPage: true,
-            items: imgList.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.symmetric(horizontal: 5.0),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: MediaQuery.of(context).platformBrightness ==
-                                  Brightness.dark
-                              ? Colors.transparent
-                              : Colors.transparent),
-                      child: Image(
-                        image: AssetImage('assets/photos/$i'),
-                      ));
-                },
-              );
-            }).toList(),
-          ),
-          Container(
-              padding: EdgeInsets.only(bottom: 20.0, left: 20.0, right: 20.0),
-              child: Column(
+            child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                      padding: EdgeInsets.only(top: 10, bottom: 20),
-                      child: Text("СВЕТСКИЙ ПРИГОРОД",
-                          style: Theme.of(context).textTheme.title)),
-                  Text(
-                      "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
-                      style: Theme.of(context).textTheme.body1)
-                ],
-              ))
-        ])),
+              Container(
+                  height: 220,
+                  child: PhotoViewGallery.builder(
+                    scrollPhysics: const BouncingScrollPhysics(),
+                    builder: (BuildContext context, int index) {
+                      return PhotoViewGalleryPageOptions(
+                        imageProvider:
+                            AssetImage('assets/photos/${imgList[index]}'),
+                        initialScale: PhotoViewComputedScale.covered,
+                        minScale: PhotoViewComputedScale.contained * 1,
+                        maxScale: PhotoViewComputedScale.contained * 1,
+                      );
+                    },
+                    itemCount: imgList.length,
+                  )),
+              Container(
+                  padding: const EdgeInsets.only(
+                      bottom: 20.0, left: 20.0, right: 20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          child: Text("СВЕТСКИЙ ПРИГОРОД",
+                              style: Theme.of(context).textTheme.title)),
+                      Text(
+                          "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
+                          style: Theme.of(context).textTheme.body1)
+                    ],
+                  ))
+            ])),
         drawer: NavigationDrawer());
   }
 }

@@ -14,7 +14,7 @@ class ContactDetailsScreen extends StatelessWidget {
             title: Text("Детали контакта",
                 style: Theme.of(context).textTheme.subhead)),
         body: Container(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
