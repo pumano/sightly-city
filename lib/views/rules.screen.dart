@@ -8,7 +8,7 @@ class RulesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Кодекс", style: Theme.of(context).textTheme.subhead),
+          title: Text("Кодекс", style: Theme.of(context).textTheme.subtitle1),
         ),
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
@@ -20,9 +20,9 @@ class RulesScreen extends StatelessWidget {
                       Container(
                           padding: const EdgeInsets.only(bottom: 20),
                           child: Text("Тишина",
-                              style: Theme.of(context).textTheme.title)),
+                              style: Theme.of(context).textTheme.headline6)),
                       Text("Соблюдение закона о тишине",
-                          style: Theme.of(context).textTheme.body1),
+                          style: Theme.of(context).textTheme.bodyText1),
                     ]))));
   }
 }

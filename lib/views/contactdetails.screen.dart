@@ -12,7 +12,7 @@ class ContactDetailsScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
             title: Text("Детали контакта",
-                style: Theme.of(context).textTheme.subhead)),
+                style: Theme.of(context).textTheme.subtitle1)),
         body: Container(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -20,7 +20,7 @@ class ContactDetailsScreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                       child: Text(contact.name,
-                          style: Theme.of(context).textTheme.title)),
+                          style: Theme.of(context).textTheme.headline6)),
                   contact.phone != null
                       ? ListTile(
                           leading: Icon(

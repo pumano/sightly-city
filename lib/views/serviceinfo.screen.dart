@@ -36,7 +36,7 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
     return Scaffold(
         appBar: AppBar(
             title: Text("Информация УК",
-                style: Theme.of(context).textTheme.subhead)),
+                style: Theme.of(context).textTheme.subtitle1)),
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
             child: Container(

@@ -40,11 +40,12 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
         appBar: AppBar(
             title: Text('Видный Город',
-                style: Theme.of(context).textTheme.subhead)),
-        body: Container(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
+                style: Theme.of(context).textTheme.subtitle1)),
+        body: SingleChildScrollView(
+            child: Container(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
               Container(
                   height: 220,
                   child: PhotoViewGallery.builder(
@@ -69,13 +70,27 @@ class _MainScreenState extends State<MainScreen> {
                       Container(
                           padding: const EdgeInsets.only(top: 10, bottom: 20),
                           child: Text("СВЕТСКИЙ ПРИГОРОД",
-                              style: Theme.of(context).textTheme.title)),
+                              style: Theme.of(context).textTheme.headline6)),
                       Text(
-                          "«Видный Город» расположен всего в 6 км от Москвы по Варшавскому шоссе, в зеленом уголке Подмосковья, богатом историческими усадебными традициями и природными достопримечательностями. До ближайшего метро - всего 10-15 минут на собственном или общественном транспорте.",
-                          style: Theme.of(context).textTheme.body1)
+                          "Всего в 15 минутах от столицы можно жить как в красивейших пригородах Парижа или Санкт-Петербурга. Выходить из дома прекрасной классической архитектуры, любуясь целым ансамблем архитектурных шедевров.",
+                          style: Theme.of(context).textTheme.bodyText1),
+                      Container(
+                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          child: Text("ДОМА-КВАРТАЛЫ С БЕЗОПАСНЫМИ ДВОРАМИ",
+                              style: Theme.of(context).textTheme.headline6)),
+                      Text(
+                          "Проезд машин в наши дворы физически невозможен. Паркуются только со стороны улицы или в подземных и наземных паркингах. Можно спокойно отпустить ребенка играть на детской площадке или погулять во дворе вечером.",
+                          style: Theme.of(context).textTheme.bodyText1),
+                      Container(
+                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          child: Text("АВТОРСКАЯ АРХИТЕКТУРА",
+                              style: Theme.of(context).textTheme.headline6)),
+                      Text(
+                          "«Видный Город» расположен неподалеку от старинной усадьбы Суханово, так что классический облик фасадов и рисунок генплана, напоминающего регулярные усадебные парки, становятся продолжением истории этой местности. Каждый фасад здесь неповторим, отличается цветом, декоративными элементами, рисунком балконов и веранд. Так задается сложность и богатство архитектурного облика. Автор проекта — Максим Атаянц, один из лучших архитекторов, работающих в классике.",
+                          style: Theme.of(context).textTheme.bodyText1)
                     ],
                   ))
-            ])),
+            ]))),
         drawer: NavigationDrawer());
   }
 }
