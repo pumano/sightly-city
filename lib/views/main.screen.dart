@@ -10,8 +10,10 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final List<String> imgList = [
-    'vg1.jpg',
-    'vg2.jpg',
+    // 'vg1.jpg',
+    // 'vg2.jpg',
+    'vg20.jpg',
+    'vg12.jpg',
     'vg3.jpg',
     'vg4.jpg',
     'vg5.jpg',
@@ -19,9 +21,8 @@ class _MainScreenState extends State<MainScreen> {
     'vg7.jpg',
     'vg8.jpg',
     // 'vg9.jpg',
-    'vg10.jpg',
+    // 'vg10.jpg',
     'vg11.jpg',
-    'vg12.jpg',
     'vg13.jpg',
     'vg14.jpg',
     'vg15.jpg',
@@ -29,7 +30,6 @@ class _MainScreenState extends State<MainScreen> {
     'vg17.jpg',
     // 'vg18.jpg',
     'vg19.jpg',
-    'vg20.jpg',
     'vg21.jpg',
     'vg22.jpg',
     'vg23.jpg',
