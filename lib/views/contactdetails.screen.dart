@@ -21,15 +21,24 @@ class ContactDetailsScreen extends StatelessWidget {
                   Container(
                       child: Text(contact.name,
                           style: Theme.of(context).textTheme.headline6)),
-                  contact.phone != null
-                      ? ListTile(
-                          leading: Icon(
-                            Icons.phone,
-                            color: Colors.greenAccent,
-                          ),
-                          title: Text(contact.phone),
-                          onTap: () async {
-                            UrlLauncher().launchURL("tel:" + contact.phone);
+                  contact.phones != null
+                      ? ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          itemCount: contact.phones.length,
+                          itemBuilder: (context, index) {
+                            return ListTile(
+                              leading: Icon(
+                                Icons.phone,
+                                color: Colors.greenAccent,
+                              ),
+                              title: Text(contact.phones[index]),
+                              onTap: () async {
+                                UrlLauncher()
+                                    .launchURL("tel:" + contact.phones[index]);
+                              },
+                            );
                           },
                         )
                       : Container(),

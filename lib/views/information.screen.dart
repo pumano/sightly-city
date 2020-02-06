@@ -3,19 +3,22 @@ import 'package:sightlycity/models/contacts.dart';
 import 'package:sightlycity/nav_drawer.dart';
 import 'package:sightlycity/widgets/contactslist.widget.dart';
 
-class ServiceInfoScreen extends StatefulWidget {
-  const ServiceInfoScreen({Key key}) : super(key: key);
+class InformationScreen extends StatefulWidget {
+  const InformationScreen({Key key}) : super(key: key);
 
   @override
-  _ServiceInfoScreenState createState() => _ServiceInfoScreenState();
+  _InformationScreenState createState() => _InformationScreenState();
 }
 
-class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
+class _InformationScreenState extends State<InformationScreen> {
   List contacts;
   List managementCompanyContacts;
   List emergenceContacts;
   List elevatorContacts;
   List garbageCollectionContacts;
+  List multifunctionalContacts;
+  List medicalContacts;
+  List policeContacts;
   List russianPostContacts;
   List webServicesContacts;
 
@@ -26,6 +29,9 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
     emergenceContacts = getEmergenceContacts();
     elevatorContacts = getElevatorContacts();
     garbageCollectionContacts = getGarbageCollectionContacts();
+    multifunctionalContacts = getMultifunctionalContacts();
+    medicalContacts = getMedicalContacts();
+    policeContacts = getPoliceContacts();
     russianPostContacts = getRussianPostContacts();
     webServicesContacts = getWebServicesContacts();
     super.initState();
@@ -35,7 +41,7 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text("Информация УК",
+            title: Text("Информация и телефоны",
                 style: Theme.of(context).textTheme.subtitle1)),
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
@@ -57,11 +63,6 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
                       Container(
                           padding:
                               const EdgeInsets.only(top: 20.0, bottom: 20.0),
-                          child: Text("Лифтовая диспетчерская")),
-                      ContactsList(contacts: elevatorContacts),
-                      Container(
-                          padding:
-                              const EdgeInsets.only(top: 20.0, bottom: 20.0),
                           child: Text("Телефоны техников")),
                       ContactsList(contacts: contacts),
                       Container(
@@ -72,13 +73,33 @@ class _ServiceInfoScreenState extends State<ServiceInfoScreen> {
                       Container(
                           padding:
                               const EdgeInsets.only(top: 20.0, bottom: 20.0),
-                          child: Text("Вывоз мусора")),
-                      ContactsList(contacts: garbageCollectionContacts),
+                          child: Text("Лифтовая диспетчерская")),
+                      ContactsList(contacts: elevatorContacts),
+                      Container(
+                          padding:
+                              const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                          child: Text("МФЦ")),
+                      ContactsList(contacts: multifunctionalContacts),
+                      Container(
+                          padding:
+                              const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                          child: Text("Медицина")),
+                      ContactsList(contacts: medicalContacts),
+                      Container(
+                          padding:
+                              const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                          child: Text("Полиция")),
+                      ContactsList(contacts: policeContacts),
                       Container(
                           padding:
                               const EdgeInsets.only(top: 20.0, bottom: 20.0),
                           child: Text("Почтовое отделение")),
                       ContactsList(contacts: russianPostContacts),
+                      Container(
+                          padding:
+                              const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                          child: Text("Вывоз мусора")),
+                      ContactsList(contacts: garbageCollectionContacts),
                     ]))));
   }
 }

@@ -1,7 +1,7 @@
 class Contact {
   String name;
   String description;
-  String phone;
+  List<String> phones;
   String email;
   String website;
   String address;
@@ -9,7 +9,7 @@ class Contact {
 
   Contact(
       {this.name,
-      this.phone,
+      this.phones,
       this.email,
       this.description,
       this.website,

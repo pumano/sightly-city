@@ -74,7 +74,17 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.popAndPushNamed(context, '/serviceinfo');
+              Navigator.popAndPushNamed(context, '/information');
+            },
+          ),
+          ListTile(
+            title: Text('Управляющая компания',
+                style: Theme.of(context).textTheme.subtitle1),
+            onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              Navigator.popAndPushNamed(context, '/servicecompany');
             },
           ),
           ListTile(
@@ -112,7 +122,7 @@ class NavigationDrawer extends StatelessWidget {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pop(context);
+              Navigator.popAndPushNamed(context, "/socialnetworks");
             },
           ),
         ],
