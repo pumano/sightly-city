@@ -28,7 +28,9 @@ class RulesScreen extends StatelessWidget {
                       Text(
                           " Пожаловаться на шумных соседей можно в полицию – для этого можно позвонить «112». В этом случае желательно иметь какие-то доказательства того, что шум в неположенное время действительно был – видеозапись или аудиозапись, так как к моменту приезда полиции все может прекратиться.",
                           style: Theme.of(context).textTheme.bodyText1),
+                      Padding(padding: EdgeInsets.only(top: 20)),
                       Image(image: AssetImage("assets/law.png")),
+                      Padding(padding: EdgeInsets.only(top: 10)),
                       Container(
                           padding: const EdgeInsets.only(bottom: 20),
                           child: Text("Выгул собак",

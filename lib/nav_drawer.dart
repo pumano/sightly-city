@@ -59,7 +59,8 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Новости', style: Theme.of(context).textTheme.subtitle1),
+            title:
+                Text('Новости', style: Theme.of(context).textTheme.subtitle1),
             onTap: () {
               // Update the state of the app
               // ...
@@ -117,7 +118,8 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Соц сети', style: Theme.of(context).textTheme.subtitle1),
+            title:
+                Text('Соц сети', style: Theme.of(context).textTheme.subtitle1),
             onTap: () {
               // Update the state of the app
               // ...

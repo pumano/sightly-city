@@ -57,14 +57,14 @@ class _InformationScreenState extends State<InformationScreen> {
                       ContactsList(contacts: emergenceContacts),
                       Container(
                           padding:
-                              const EdgeInsets.only(top: 10.0, bottom: 20.0),
-                          child: Text("Службы одного окна")),
-                      ContactsList(contacts: webServicesContacts),
-                      Container(
-                          padding:
                               const EdgeInsets.only(top: 20.0, bottom: 20.0),
                           child: Text("Телефоны техников")),
                       ContactsList(contacts: contacts),
+                      Container(
+                          padding:
+                              const EdgeInsets.only(top: 10.0, bottom: 20.0),
+                          child: Text("Службы одного окна")),
+                      ContactsList(contacts: webServicesContacts),
                       Container(
                           padding:
                               const EdgeInsets.only(top: 20.0, bottom: 20.0),
