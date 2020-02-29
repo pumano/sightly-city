@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           headline5: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           headline6: TextStyle(
-              fontSize: 36.0,
+              fontSize: 25.0,
               color: Color(0xFFAC956B),
               fontFamily: "PoiretOne"),
           subtitle2: TextStyle(
@@ -52,7 +52,8 @@ class MyApp extends StatelessWidget {
               letterSpacing: 1.15,
               color: Color(0xFF5D5D5D)),
           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-          subtitle1: TextStyle(fontFamily: "HelveticaNeueCyrThin", fontSize: 20),
+          subtitle1:
+              TextStyle(fontFamily: "HelveticaNeueCyrThin", fontSize: 20),
         ),
       ),
       darkTheme: ThemeData(
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             headline5: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
             headline6: TextStyle(
-                fontSize: 36.0,
+                fontSize: 25.0,
                 color: Color(0xFFAC956B),
                 fontFamily: "PoiretOne"),
             subtitle2: TextStyle(
