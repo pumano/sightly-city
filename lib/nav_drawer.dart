@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:sightlycity/models/menu-item.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
+
+  static const List<MenuItem> links = [
+    MenuItem(name: "О Видном Городе", link: '/'),
+    // MenuItem(name: "Новости", link: '/news'),
+    MenuItem(name: "Информация и телефоны", link: '/information'),
+    // MenuItem(name: "Управляющая компания", link: '/servicecompany'),
+    MenuItem(name: "Расположение", link: '/transport'),
+    MenuItem(name: "Кодекс", link: '/rules'),
+    MenuItem(name: "Инфраструктура", link: '/infrastructure'),
+    MenuItem(name: "Соц сети", link: '/socialnetworks'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -48,85 +60,19 @@ class NavigationDrawer extends StatelessWidget {
               color: Color(0xFF941C40),
             ),
           ),
-          ListTile(
-            title: Text('О Видном Городе',
-                style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, '/');
-            },
-          ),
-          ListTile(
-            title:
-                Text('Новости', style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text('Информация и телефоны',
-                style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, '/information');
-            },
-          ),
-          ListTile(
-            title: Text('Управляющая компания',
-                style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, '/servicecompany');
-            },
-          ),
-          ListTile(
-            title: Text('Расположение',
-                style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, "/transport");
-            },
-          ),
-          ListTile(
-            title: Text('Кодекс', style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, "/rules");
-            },
-          ),
-          ListTile(
-            title: Text('Инфраструктура',
-                style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, "/infrastructure");
-            },
-          ),
-          ListTile(
-            title:
-                Text('Соц сети', style: Theme.of(context).textTheme.subtitle1),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.popAndPushNamed(context, "/socialnetworks");
-            },
-          ),
+          ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: links.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(links[index].name,
+                      style: Theme.of(context).textTheme.subtitle1),
+                  onTap: () {
+                    Navigator.popAndPushNamed(context, links[index].link);
+                  },
+                );
+              }),
         ],
       ),
     ));
