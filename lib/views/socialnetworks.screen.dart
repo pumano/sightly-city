@@ -18,8 +18,7 @@ class SocialNetworksScreen extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 radius: 30.0,
-                backgroundImage:
-                    AssetImage('assets/vgonline.jpg'),
+                backgroundImage: AssetImage('assets/vgonline.jpg'),
                 backgroundColor: Colors.transparent,
               ),
               title: Text("https://vk.com/vgonline"),
@@ -28,30 +27,28 @@ class SocialNetworksScreen extends StatelessWidget {
                 UrlLauncher().launchURL("https://vk.com/vgonline");
               },
             ),
-             ListTile(
+            ListTile(
+                leading: CircleAvatar(
+                  radius: 30.0,
+                  backgroundImage: AssetImage('assets/logo.png'),
+                  backgroundColor: Colors.transparent,
+                ),
+                title: Text("https://vk.com/moms_of_vg"),
+                subtitle: Text("Мамы ЖК «Видный город»"),
+                onTap: () async {
+                  UrlLauncher().launchURL("https://vk.com/moms_of_vg");
+                }),
+            ListTile(
               leading: CircleAvatar(
                 radius: 30.0,
-                backgroundImage:
-                    AssetImage('assets/logo.png'),
-                backgroundColor: Colors.transparent,
-              ),
-              title: Text("https://vk.com/moms_of_vg"),
-              subtitle: Text("Мамы ЖК «Видный город»"),
-              onTap: () async {
-                UrlLauncher().launchURL("https://vk.com/moms_of_vg");
-              }
-             ),
-               ListTile(
-              leading: CircleAvatar(
-                radius: 30.0,
-                backgroundImage:
-                    AssetImage('assets/vgonline.jpg'),
+                backgroundImage: AssetImage('assets/vgonline.jpg'),
                 backgroundColor: Colors.transparent,
               ),
               title: Text("https://www.instagram.com/vidniygorodonline"),
               subtitle: Text("ЖК Видный город. Ребята с нашего двора"),
               onTap: () async {
-                UrlLauncher().launchURL("https://www.instagram.com/vidniygorodonline");
+                UrlLauncher()
+                    .launchURL("https://www.instagram.com/vidniygorodonline");
               },
             )
           ],

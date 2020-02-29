@@ -68,21 +68,21 @@ class _MainScreenState extends State<MainScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Container(
-                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          padding: const EdgeInsets.only(top: 20, bottom: 20),
                           child: Text("СВЕТСКИЙ ПРИГОРОД",
                               style: Theme.of(context).textTheme.headline6)),
                       Text(
                           "Всего в 15 минутах от столицы можно жить как в красивейших пригородах Парижа или Санкт-Петербурга. Выходить из дома прекрасной классической архитектуры, любуясь целым ансамблем архитектурных шедевров.",
                           style: Theme.of(context).textTheme.bodyText1),
                       Container(
-                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          padding: const EdgeInsets.only(top: 20, bottom: 20),
                           child: Text("ДОМА-КВАРТАЛЫ С БЕЗОПАСНЫМИ ДВОРАМИ",
                               style: Theme.of(context).textTheme.headline6)),
                       Text(
                           "Проезд машин в наши дворы физически невозможен. Паркуются только со стороны улицы или в подземных и наземных паркингах. Можно спокойно отпустить ребенка играть на детской площадке или погулять во дворе вечером.",
                           style: Theme.of(context).textTheme.bodyText1),
                       Container(
-                          padding: const EdgeInsets.only(top: 10, bottom: 20),
+                          padding: const EdgeInsets.only(top: 20, bottom: 20),
                           child: Text("АВТОРСКАЯ АРХИТЕКТУРА",
                               style: Theme.of(context).textTheme.headline6)),
                       Text(

@@ -1,18 +1,19 @@
 class Contact {
-  String name;
-  String description;
-  List<String> phones;
-  String email;
-  String website;
-  String address;
-  List coords;
+  final String name;
+  final String description;
+  final List<String> phones;
+  final String email;
+  final String website;
+  final String address;
+  final List coords;
 
-  Contact(
-      {this.name,
-      this.phones,
-      this.email,
-      this.description,
-      this.website,
-      this.address,
-      this.coords});
+  const Contact({
+    this.name,
+    this.phones,
+    this.email,
+    this.description,
+    this.website,
+    this.address,
+    this.coords,
+  });
 }
