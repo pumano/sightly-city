@@ -9,8 +9,8 @@ class TransportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title:
-              Text("Как добраться", style: Theme.of(context).textTheme.subtitle1),
+          title: Text("Как добраться",
+              style: Theme.of(context).textTheme.subtitle1),
         ),
         drawer: NavigationDrawer(),
         body: SingleChildScrollView(
@@ -25,14 +25,14 @@ class TransportScreen extends StatelessWidget {
                     children: <Widget>[
                       Container(
                           padding: const EdgeInsets.only(bottom: 20),
-                          child: Text("На автомобиле",
+                          child: Text("НА АВТОМОБИЛЕ",
                               style: Theme.of(context).textTheme.headline6)),
                       Text(
                           "6 км от Москвы по Варшавскому шоссе, до первого перекрестка после МКАД, далее налево по указателю на Расторгуевское шоссе. По рассторгуевскому шоссе до указателя ЖК «Видный Город».",
                           style: Theme.of(context).textTheme.bodyText1),
                       Container(
                           padding: const EdgeInsets.only(top: 20, bottom: 20),
-                          child: Text("На метро",
+                          child: Text("НА МЕТРО",
                               style: Theme.of(context).textTheme.headline6)),
                       Container(
                           padding: const EdgeInsets.only(bottom: 20),
@@ -50,7 +50,7 @@ class TransportScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.bodyText1),
                       Container(
                           padding: const EdgeInsets.only(top: 20, bottom: 20),
-                          child: Text("На электричке",
+                          child: Text("НА ЭЛЕКТРИЧКЕ",
                               style: Theme.of(context).textTheme.headline6)),
                       Container(
                           padding: const EdgeInsets.only(bottom: 20),
