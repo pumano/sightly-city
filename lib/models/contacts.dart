@@ -103,7 +103,13 @@ List<Contact> getMultifunctionalContacts() {
       name: 'МФЦ Московской области',
       description: 'Единый контакт-центр МФЦ Московской области',
       phones: ['+7 (800) 550-50-30'],
-    )
+    ),
+    Contact(
+        name: 'Росреестр',
+        description: 'Единый контакт-центр Росреестра',
+        phones: ['+7 (800) 100-34-34'],
+        website: 'https://rosreestr.ru',
+        address: '142703, МО, Ленинский р-н, г. Видное, ул. Лемешко, 17'),
   ];
 }
 
