@@ -82,7 +82,7 @@ class InfrastructureScreen extends StatelessWidget {
                           child: Text("ЗДОРОВЬЕ",
                               style: Theme.of(context).textTheme.headline6)),
                       Text(
-                          "Ближайшая поликлитика находится в ЖК Бутово Парк. Недолеко есть аптека.",
+                          "Ближайшая поликлитика находится в ЖК Бутово Парк. Аптека находится в ТЦ «Аструм Видное».",
                           style: Theme.of(context).textTheme.bodyText1),
                     ],
                   ))
