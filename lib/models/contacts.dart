@@ -15,18 +15,17 @@ List<Contact> getTechnicianContacts() {
     Contact(
       name: 'Техник Ольга',
       phones: ['+7 (966) 356-94-95'],
+      workingHours: '8:00-18:00',
     ),
     Contact(
       name: 'Сантехник Роман',
       phones: ['+7 (901) 381-49-91'],
-    ),
-    Contact(
-      name: 'Электрик Сергей',
-      phones: ['+7 (937) 731-66-90'],
+      workingHours: '8:00-18:00 с 1 по 15 число месяца',
     ),
     Contact(
       name: 'Слесарь-сантехник Андрей',
       phones: ['+7 (977) 459-76-58'],
+      workingHours: '8:00-18:00 с 15 по конец месяца',
     )
   ];
 }
@@ -57,21 +56,13 @@ List<Contact> getManagementCompanyContacts() {
       email: 'pravo@gkhvidnoe.ru',
     ),
     Contact(
-      name: 'Отдел кадров',
-      phones: ['+7 (495) 541-57-56'],
-    ),
-    Contact(
       name: 'Финансово-экономический отдел',
       phones: ['+7 (495) 548-04-34'],
     ),
     Contact(
       name: 'ЦУ КИПА (домофоны)',
       phones: ['+7 (495) 541-57-56'],
-    ),
-    Contact(
-      name: 'IT отдел (проблемы с доступом на сайт)',
-      email: '4955488977@mail.ru',
-    ),
+    )
   ];
 }
 
@@ -79,7 +70,7 @@ List<Contact> getElevatorContacts() {
   return [
     Contact(
       name: 'Лифтовая диспетчерская',
-      description: "ООО МиТОЛ",
+      description: "ООО ЮГ ЛИФТ",
       phones: ['+7 (495) 548-46-97'],
     )
   ];
@@ -145,16 +136,28 @@ List<Contact> getRussianPostContacts() {
     Contact(
       name: 'Почта России',
       description: '142702',
-      phones: ['+7 (800) 100-00-00'],
+      phones: [
+        '+7 (800) 100-00-00',
+        '+7 (495) 541-07-44',
+        '+7 (495) 541-66-78'
+      ],
       website: 'https://pochta.ru/',
       address: '142702, г. Видное, Ленинский р-он, Петровский проезд, д. 24',
       coords: [55.5367, 37.6631],
+      workingHours: 'Вт-Пт 09:00-18:00, Сб 09:00-16:00, Пн Вс - выходной',
     )
   ];
 }
 
 List<Contact> getWebServicesContacts() {
   return [
+    Contact(
+      name: 'МосОблЕИРЦ - оплата ЖКХ',
+      description: 'Оплата ЖКХ',
+      website: 'https://lkk.mosobleirc.ru',
+      phones: ['+7 (496) 245-15-99'],
+      workingHours: '08:00-22:00',
+    ),
     Contact(
       name: 'Единая Диспетчерская Служба МО',
       description:

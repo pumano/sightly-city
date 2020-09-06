@@ -5,6 +5,7 @@ class Contact {
   final String email;
   final String website;
   final String address;
+  final String workingHours;
   final List coords;
 
   const Contact({
@@ -14,6 +15,7 @@ class Contact {
     this.description,
     this.website,
     this.address,
+    this.workingHours,
     this.coords,
   });
 }
