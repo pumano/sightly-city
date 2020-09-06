@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'routes.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 // colors
 // #941c40 // main bordo

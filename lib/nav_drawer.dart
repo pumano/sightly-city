@@ -6,7 +6,7 @@ class NavigationDrawer extends StatelessWidget {
 
   static const List<MenuItem> links = [
     MenuItem(name: "О Видном Городе", link: '/'),
-    // MenuItem(name: "Новости", link: '/news'),
+    MenuItem(name: "Новости", link: '/news'),
     MenuItem(name: "Информация и телефоны", link: '/information'),
     // MenuItem(name: "Управляющая компания", link: '/servicecompany'),
     MenuItem(name: "Расположение", link: '/transport'),
