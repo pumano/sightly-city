@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
-import '../nav_drawer.dart';
+import '../../widgets/nav_drawer/nav_drawer.dart';
 
 class InfrastructureScreen extends StatelessWidget {
   const InfrastructureScreen({Key key}) : super(key: key);

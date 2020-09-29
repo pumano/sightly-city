@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/nav_drawer.dart';
+import 'package:sightlycity/widgets/nav_drawer/nav_drawer.dart';
 import 'package:sightlycity/widgets/map.widget.dart';
 
 class TransportScreen extends StatelessWidget {

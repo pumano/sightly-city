@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/widgets/newslist.widget.dart';
+import 'package:sightlycity/views/news/newslist.widget.dart';
 
-import '../nav_drawer.dart';
+import '../../widgets/nav_drawer/nav_drawer.dart';
 
 class NewsScreen extends StatelessWidget {
   const NewsScreen({Key key}) : super(key: key);

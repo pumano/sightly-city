@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/models/contact.dart';
-import 'package:sightlycity/views/contactdetails.screen.dart';
+import 'package:sightlycity/views/contacts/contact.dart';
+import 'package:sightlycity/views/contacts/contactdetails.screen.dart';
 
 class ContactsList extends StatelessWidget {
   final List<Contact> contacts;
@@ -32,7 +32,8 @@ class ContactsList extends StatelessWidget {
                       padding: EdgeInsets.only(right: 12.0),
                       decoration: BoxDecoration(
                           border: Border(right: BorderSide(width: 1.0))),
-                      child: (contacts[index].phones != null && contacts[index].phones.length > 0)
+                      child: (contacts[index].phones != null &&
+                              contacts[index].phones.length > 0)
                           ? Icon(Icons.phone)
                           : contacts[index].website != null
                               ? Icon(Icons.insert_link)
@@ -47,7 +48,8 @@ class ContactsList extends StatelessWidget {
                     subtitle: Row(
                       children: <Widget>[
                         Text(
-                          (contacts[index].phones != null && contacts[index].phones.length > 0)
+                          (contacts[index].phones != null &&
+                                  contacts[index].phones.length > 0)
                               ? contacts[index].phones[0]
                               : '',
                         )

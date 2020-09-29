@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/helpers/url_launcher.dart';
-import 'package:sightlycity/models/contact.dart';
+import 'package:sightlycity/views/contacts/contact.dart';
 import 'package:sightlycity/widgets/map.widget.dart';
+import 'package:sightlycity/widgets/url_launcher.dart';
 
 class ContactDetailsScreen extends StatelessWidget {
   final Contact contact;

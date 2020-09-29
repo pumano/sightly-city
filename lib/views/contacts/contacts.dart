@@ -1,4 +1,4 @@
-import 'package:sightlycity/models/contact.dart';
+import 'package:sightlycity/views/contacts/contact.dart';
 
 List<Contact> getEmergenceContacts() {
   return [

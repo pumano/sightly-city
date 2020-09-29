@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/models/contacts.dart';
-import 'package:sightlycity/nav_drawer.dart';
-import 'package:sightlycity/widgets/contactslist.widget.dart';
+import 'package:sightlycity/views/contacts/contacts.dart';
+import 'package:sightlycity/widgets/nav_drawer/nav_drawer.dart';
+import 'package:sightlycity/views/contacts/contactslist.widget.dart';
 
 class InformationScreen extends StatefulWidget {
   const InformationScreen({Key key}) : super(key: key);

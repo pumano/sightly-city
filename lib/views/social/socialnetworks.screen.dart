@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/helpers/url_launcher.dart';
-import 'package:sightlycity/nav_drawer.dart';
+import 'package:sightlycity/widgets/nav_drawer/nav_drawer.dart';
+import 'package:sightlycity/widgets/url_launcher.dart';
 
 class SocialNetworksScreen extends StatelessWidget {
   const SocialNetworksScreen({Key key}) : super(key: key);

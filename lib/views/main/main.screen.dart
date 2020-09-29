@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import 'package:sightlycity/nav_drawer.dart';
+import 'package:sightlycity/widgets/nav_drawer/nav_drawer.dart';
 
 class MainScreen extends StatefulWidget {
   @override

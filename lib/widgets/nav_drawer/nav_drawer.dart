@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sightlycity/models/menu-item.dart';
+import 'package:sightlycity/widgets/nav_drawer/menu-item.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
