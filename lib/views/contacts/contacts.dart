@@ -18,6 +18,11 @@ List<Contact> getTechnicianContacts() {
       workingHours: '8:00-18:00',
     ),
     Contact(
+      name: 'Техник Денис',
+      phones: ['+7 (901) 345-67-60'],
+      workingHours: '8:00-18:00',
+    ),
+    Contact(
       name: 'Сантехник Роман',
       phones: ['+7 (901) 381-49-91'],
       workingHours: '8:00-18:00 с 1 по 15 число месяца',
