@@ -12,11 +12,33 @@
 - информация о ЖК
 - Как добраться
 
-
 ## Платформы
+
 - iOS
 - Android ([Google Play](https://play.google.com/store/apps/details?id=com.pumano.sightlycity))
 
 ## Дополнительно
+
 - поддержка темной темы
 
+## Разработка
+
+установка зависимостей:
+
+```bash
+flutter pub get
+```
+
+Запуск:
+
+```bash
+flutter run
+```
+
+Сборка:
+
+```bash
+flutter build
+```
+
+Для работы Firestore нужны файлы `google-services.json` и `GoogleService-Info.plist` из консоли Firebase.

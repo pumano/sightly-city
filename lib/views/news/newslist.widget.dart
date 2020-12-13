@@ -10,7 +10,7 @@ class NewsList extends StatelessWidget {
         if (snapshot.hasError) return Text('Error: ${snapshot.error}');
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
-            return Text('Loading...');
+            return Center(child: CircularProgressIndicator());
           default:
             return ListView(
               children: snapshot.data.docs.map((DocumentSnapshot document) {
