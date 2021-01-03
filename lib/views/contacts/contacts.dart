@@ -28,8 +28,8 @@ List<Contact> getTechnicianContacts() {
       workingHours: '8:00-18:00 с 1 по 15 число месяца',
     ),
     Contact(
-      name: 'Слесарь-сантехник Андрей',
-      phones: ['+7 (977) 459-76-58'],
+      name: 'Сантехник Константин',
+      phones: ['+7 (991) 944-65-70'],
       workingHours: '8:00-18:00 с 15 по конец месяца',
     )
   ];
